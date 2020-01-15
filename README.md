@@ -1,3 +1,3 @@
 # PythonClub
 A Website.
-![firstsetup!](firstsetup.png)
+![firstsetup!](FirstSetup.png)
