@@ -15,7 +15,9 @@ A Website.
 ![CreateGroup!](PythonClub/pics/CreateGroup.png)
 
 ***Add Resource Url*** 
+
 ![HomeTags!](PythonClub/pics/HomeTags.png)
 
 ***Simple Resource Page***
-![ResourcePage!](PythonClub/pics/ResourcePage.png)
+
+![ResourcePage!](PythonClub/pics/ResourcesPage.png)
