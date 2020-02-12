@@ -34,3 +34,8 @@
 ***Viewing the full details of a Meeting***
 
 ![meetingdetails!](PythonClub/pics/MeetingDetails.png)
+
+***Meeting Details Test Case & other Test Cases***
+
+![meetingdetailstest!](PythonClub/pics/Test2.png)
+
