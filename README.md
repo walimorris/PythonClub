@@ -22,3 +22,15 @@
 ***Simple Resource Page***
 
 ![ResourcePage!](PythonClub/pics/ResourcesPage.png)
+
+***Viewing Upcoming Meetings***
+
+![viewingmeeting!](PythonClub/pics/MeetingsView.png)
+
+***Clickable Meeting Link***
+
+![meetinglink!](PythonClub/pics/MeetingsLink.png)
+
+***Viewing the full details of a Meeting***
+
+![meetingdetails!](PythonClub/pics/MeetingDetails.png)
