@@ -1,5 +1,6 @@
 # PythonClub
-A Website.
+
+***Building a Python Club: Under construction.***
 ![firstsetup!](PythonClub/pics/FirstSetup.png)
 
 ***A look at the models from the admin page***
