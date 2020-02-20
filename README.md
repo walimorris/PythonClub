@@ -39,3 +39,11 @@
 
 ![meetingdetailstest!](PythonClub/pics/Test2.png)
 
+***New Form to add meetings***
+
+![meetingform!](PythonClub/pics/meetingform.png)
+
+***New Form to add resources***
+
+![resourceform!](PythonClub/pics/resourceform.png)
+
