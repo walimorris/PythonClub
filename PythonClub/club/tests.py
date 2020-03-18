@@ -1,8 +1,10 @@
 from django.test import TestCase
+from django.test import Client
 from .models import Meeting, MeetingMinute, Resource, Event
 from .views import index, getresources, getmeetings, meetingdetails
 from django.urls import reverse
 from django.contrib.auth.models import User
+from .forms import * 
 
 # Test Models 
 class MeetingTest(TestCase): 
@@ -78,11 +80,12 @@ class GetMeetingTest(TestCase):
         response = self.client.get(reverse('meetingdetails', args=(self.meetingid.id, ))) # trailing comma required for single-item tuples
         self.assertEqual(response.status_code, 200)
 
+# Login and Logout tests
 class New_Product_authentication_test(TestCase): 
     def setUp(self): 
         self.test_user = User.objects.create_user(username = 'testuser1', password = 'P@assw0rd1')
-        self.type = ResourceType.objects.create(typename = 'website')
-        self.prod = Resource.objects.create(productname = 'resource1', producttype = self.type)
+        self.type = Resource.objects.create(resourcetype= 'website')
+        self.prod = Resource.objects.create(resourcename = 'resource1', producttype = self.type)
 
     def test_redirect_if_not_logged_in(self): 
         response = self.client.get(reverse('newresource'))
@@ -94,3 +97,20 @@ class New_Product_authentication_test(TestCase):
         self.assertEqual(str(response.status.context['user']), 'testuser1')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'club/newresource.html')
+
+# Forms test
+class MeetingFormTest(TestCase): 
+    def setUp(self): 
+        self.meetingform = MeetingForm.objects.create(meetingtitle='welcome', meetingdate='2000-12-31', 
+        meetinglocation='Starbucks', meetingAgenda='Welcome the newest members')
+
+    def test_MeetingForm_valid(self): 
+        form = MeetingForm(data={'meetingtitle':'welcome', 'meetingdate':'2000-12-31', 
+        'meetinglocation':'Starbucks', 'meetingAgenda':'Welcome the newest members'})
+        self.assertTrue(form.is_valid())
+    
+    def test_MeetingForm_invalid(self): 
+        form = MeetingForm(data={'meetingtitle':"", 'meetingdate':'20001231', 
+        'meetinglocation':"", 'meetingAgenda':""})
+        self.assertFalse(form.is_valid())
+        
